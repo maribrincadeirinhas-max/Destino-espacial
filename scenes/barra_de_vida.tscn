@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://d12ui0dunvdej"]
+
+[ext_resource type="Script" uid="uid://dgx0orftxpji" path="res://scripts/barra_de_vida.gd" id="1_3dc8v"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rdopl"]
+bg_color = Color(0.30919775, 0.444593, 0.17639095, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.1445553, 0.22950593, 0.060046464, 1)
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3dc8v"]
+bg_color = Color(0.4724074, 0.7185114, 0.33464348, 1)
+
+[node name="barra_de_vida" type="ProgressBar"]
+offset_right = 100.0
+offset_bottom = 7.0
+theme_override_styles/background = SubResource("StyleBoxFlat_rdopl")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3dc8v")
+value = 100.0
+show_percentage = false
+script = ExtResource("1_3dc8v")

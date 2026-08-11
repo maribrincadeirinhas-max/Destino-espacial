@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://bffuf5hbfq7c"]
+
+[ext_resource type="Script" uid="uid://bh4tkmlt7e1xg" path="res://scripts/tela_derrota.gd" id="1_5bnta"]
+[ext_resource type="Texture2D" uid="uid://bvej4h6a3px8" path="res://PixelArt/cenario/tela_derrota.png" id="2_7eacx"]
+[ext_resource type="StyleBox" uid="uid://edtahfvv484o" path="res://tres/botao.tres" id="3_25y64"]
+[ext_resource type="AudioStream" uid="uid://c0ovgmgn60h27" path="res://audio/click_de_botao.mp3" id="3_ub6w7"]
+
+[node name="tela_derrota" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_5bnta")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(579, 299)
+scale = Vector2(1.0796138, 1.0229454)
+texture = ExtResource("2_7eacx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.0
+offset_top = -82.0
+offset_right = 174.0
+offset_bottom = 118.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 29
+text = "Você se sairá melhor 
+da próxima vez"
+horizontal_alignment = 1
+
+[node name="jogar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("3_25y64")
+text = "Jogar novamente"
+
+[node name="menu_principal" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("3_25y64")
+text = "Voltar ao menu principal"
+
+[node name="som_button" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ub6w7")
+
+[connection signal="button_down" from="VBoxContainer/jogar" to="." method="_on_jogar_button_down"]
+[connection signal="mouse_entered" from="VBoxContainer/jogar" to="." method="_on_jogar_mouse_entered"]
+[connection signal="button_down" from="VBoxContainer/menu_principal" to="." method="_on_menu_principal_button_down"]
+[connection signal="mouse_entered" from="VBoxContainer/menu_principal" to="." method="_on_menu_principal_mouse_entered"]

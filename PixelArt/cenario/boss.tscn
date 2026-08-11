@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://706cq8im7ew0"]
+
+[ext_resource type="Texture2D" uid="uid://dvvoxjcb0248i" path="res://PixelArt/bossPixel/bossSpace1.png" id="1_q7of5"]
+[ext_resource type="Texture2D" uid="uid://bd8xwrimcbiqt" path="res://PixelArt/bossPixel/bossSpace2.png" id="2_vv37r"]
+[ext_resource type="Texture2D" uid="uid://cfvjcm38w6i1y" path="res://PixelArt/bossPixel/bossSpace3.png" id="3_rthgy"]
+[ext_resource type="Texture2D" uid="uid://bm700yfaae3iq" path="res://PixelArt/bossPixel/bossSpace4.png" id="4_0wupf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hh0fu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_q7of5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vv37r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_rthgy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0wupf")
+}],
+"loop": true,
+"name": &"estatico",
+"speed": 6.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(576, 317)
+sprite_frames = SubResource("SpriteFrames_hh0fu")
+animation = &"estatico"
+autoplay = "estatico"
+frame_progress = 0.8330373

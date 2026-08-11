@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://cu65jupw006dv"]
+
+[ext_resource type="Script" uid="uid://bpkvogo7buqy0" path="res://scripts/bulletNave.gd" id="1_6b7b2"]
+[ext_resource type="Texture2D" uid="uid://cu7or2mggb5ug" path="res://PixelArt/nave/bullet.png" id="2_6b7b2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ji3b7"]
+atlas = ExtResource("2_6b7b2")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0bwhx"]
+atlas = ExtResource("2_6b7b2")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r8bqk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ji3b7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0bwhx")
+}],
+"loop": true,
+"name": &"bullet",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_81u8p"]
+radius = 7.0
+height = 26.0
+
+[node name="Area2D" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_6b7b2")
+
+[node name="bullet" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_r8bqk")
+animation = &"bullet"
+autoplay = "bullet"
+frame_progress = 0.4420728
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_81u8p")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(2, -4)
+rect = Rect2(-10, -10, 16, 26)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

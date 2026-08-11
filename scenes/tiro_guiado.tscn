@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://dkgq4jnkcg40f"]
+
+[ext_resource type="Script" uid="uid://cdqa8fnp36jgy" path="res://scripts/tiro_guiado.gd" id="1_7lavl"]
+[ext_resource type="Texture2D" uid="uid://xxve6fieqn61" path="res://PixelArt/bossPixel/power_neutro.png" id="1_bbfl0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7lavl"]
+atlas = ExtResource("1_bbfl0")
+region = Rect2(0, 0, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqtmh"]
+atlas = ExtResource("1_bbfl0")
+region = Rect2(70, 0, 70, 70)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_siulh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7lavl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iqtmh")
+}],
+"loop": true,
+"name": &"power",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e5muq"]
+radius = 31.144823
+
+[node name="tiroGuiado" type="Area2D" groups=["bossDano"]]
+scale = Vector2(0.4, 0.4)
+collision_layer = 4
+collision_mask = 9
+script = ExtResource("1_7lavl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_siulh")
+animation = &"power"
+autoplay = "power"
+frame_progress = 0.0124115385
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_e5muq")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

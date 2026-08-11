@@ -1,0 +1,112 @@
+[gd_scene load_steps=13 format=3 uid="uid://c4vq2mrv0nobf"]
+
+[ext_resource type="Script" uid="uid://ek1hsbrflqvg" path="res://scripts/especial_central.gd" id="1_6hrfw"]
+[ext_resource type="Texture2D" uid="uid://dp6rumevemcvi" path="res://PixelArt/bossPixel/power_especial.png" id="1_q5nwe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ah0xi"]
+size = Vector2(165, 591)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nt208"]
+atlas = ExtResource("1_q5nwe")
+region = Rect2(729, 0, 243, 619)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fmpvt"]
+atlas = ExtResource("1_q5nwe")
+region = Rect2(972, 0, 243, 619)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pv2ua"]
+atlas = ExtResource("1_q5nwe")
+region = Rect2(1215, 0, 243, 619)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_frnf4"]
+atlas = ExtResource("1_q5nwe")
+region = Rect2(1458, 0, 243, 619)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cy5iq"]
+atlas = ExtResource("1_q5nwe")
+region = Rect2(1701, 0, 243, 619)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lfkj6"]
+atlas = ExtResource("1_q5nwe")
+region = Rect2(1944, 0, 243, 619)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yh6rm"]
+atlas = ExtResource("1_q5nwe")
+region = Rect2(2187, 0, 243, 619)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l18et"]
+atlas = ExtResource("1_q5nwe")
+region = Rect2(2430, 0, 243, 619)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4o5ha"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nt208")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fmpvt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pv2ua")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_frnf4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cy5iq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lfkj6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yh6rm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l18et")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nt208")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fmpvt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pv2ua")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_frnf4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cy5iq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lfkj6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yh6rm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l18et")
+}],
+"loop": true,
+"name": &"continuo",
+"speed": 15.0
+}]
+
+[node name="especial" type="Area2D" groups=["bossDano"]]
+position = Vector2(143, 296)
+collision_layer = 4
+script = ExtResource("1_6hrfw")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5.5, 11.5)
+shape = SubResource("RectangleShape2D_ah0xi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4o5ha")
+animation = &"continuo"
+autoplay = "continuo"
+frame = 11
+frame_progress = 0.17917039

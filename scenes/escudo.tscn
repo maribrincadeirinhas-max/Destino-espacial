@@ -1,0 +1,68 @@
+[gd_scene load_steps=13 format=3 uid="uid://d3d82ea8jm6fu"]
+
+[ext_resource type="Texture2D" uid="uid://dpmpp60ueupj2" path="res://PixelArt/nave/escudo1.png" id="1_3wm4u"]
+[ext_resource type="Script" uid="uid://cqumycfmcpkn2" path="res://scripts/escudo.gd" id="1_q81uf"]
+[ext_resource type="Texture2D" uid="uid://dhu080fii63hy" path="res://PixelArt/nave/escudo2.png" id="2_q81uf"]
+[ext_resource type="Texture2D" uid="uid://blmu8kg01rind" path="res://PixelArt/nave/escudo3.png" id="3_iwwy3"]
+[ext_resource type="Texture2D" uid="uid://byyk3yrkkv8hr" path="res://PixelArt/nave/escudo4.png" id="4_hpgg0"]
+[ext_resource type="Texture2D" uid="uid://dnrvid1qefj8s" path="res://PixelArt/nave/escudo5.png" id="5_eqxfr"]
+[ext_resource type="Texture2D" uid="uid://by1re24bxn32w" path="res://PixelArt/nave/escudo6.png" id="6_bg6pn"]
+[ext_resource type="Texture2D" uid="uid://dl6whg7r54b7u" path="res://PixelArt/nave/escudo7.png" id="7_wvmia"]
+[ext_resource type="Texture2D" uid="uid://7dwp43k72fcs" path="res://PixelArt/nave/escudo8.png" id="8_r4d4u"]
+[ext_resource type="Texture2D" uid="uid://di5eriq1uq4lm" path="res://PixelArt/nave/escudo9.png" id="9_ec6dc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nq1ow"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3wm4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_q81uf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_iwwy3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hpgg0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_eqxfr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bg6pn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wvmia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_r4d4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ec6dc")
+}],
+"loop": false,
+"name": &"power",
+"speed": 16.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ks4fb"]
+radius = 47.010635
+
+[node name="escudo" type="Area2D" groups=["player"]]
+scale = Vector2(2, 2)
+collision_layer = 8
+collision_mask = 4
+script = ExtResource("1_q81uf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_nq1ow")
+animation = &"power"
+autoplay = "power"
+frame = 8
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ks4fb")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

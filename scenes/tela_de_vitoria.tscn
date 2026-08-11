@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://beknlwphleakf"]
+
+[ext_resource type="Script" uid="uid://c2xiprtoog7tu" path="res://scripts/vitoria.gd" id="1_hukcn"]
+[ext_resource type="Texture2D" uid="uid://clyg8j6dxqxad" path="res://PixelArt/cenario/Space1.png" id="2_fjcei"]
+[ext_resource type="Texture2D" uid="uid://b27lbsqdoc47q" path="res://PixelArt/cenario/bossSpace30.png" id="3_e4cd3"]
+[ext_resource type="AudioStream" uid="uid://c0ovgmgn60h27" path="res://audio/click_de_botao.mp3" id="4_e4cd3"]
+[ext_resource type="StyleBox" uid="uid://edtahfvv484o" path="res://tres/botao.tres" id="4_wcgs6"]
+
+[node name="vitoria" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hukcn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(578, 326.25)
+scale = Vector2(1.0654546, 1.1171244)
+texture = ExtResource("2_fjcei")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(299.99988, 919)
+scale = Vector2(3.0271592, 3.0562904)
+texture = ExtResource("3_e4cd3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "Muito bem, você venceu!"
+
+[node name="jogar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("4_wcgs6")
+text = "Jogar novamente"
+
+[node name="menu" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("4_wcgs6")
+text = "Voltar ao menu principal"
+
+[node name="som_button" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_e4cd3")
+
+[connection signal="button_down" from="VBoxContainer/jogar" to="." method="_on_jogar_button_down"]
+[connection signal="mouse_entered" from="VBoxContainer/jogar" to="." method="_on_jogar_mouse_entered"]
+[connection signal="button_down" from="VBoxContainer/menu" to="." method="_on_menu_button_down"]
+[connection signal="mouse_entered" from="VBoxContainer/menu" to="." method="_on_menu_mouse_entered"]

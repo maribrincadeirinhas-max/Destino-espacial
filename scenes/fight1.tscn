@@ -1,0 +1,173 @@
+[gd_scene load_steps=34 format=3 uid="uid://8710w4catsfj"]
+
+[ext_resource type="Texture2D" uid="uid://clyg8j6dxqxad" path="res://PixelArt/cenario/Space1.png" id="1_03eve"]
+[ext_resource type="Script" uid="uid://dypr5bmo73twy" path="res://scripts/gameSystem.gd" id="1_e1b36"]
+[ext_resource type="Texture2D" uid="uid://ckxcimyrt1l6l" path="res://PixelArt/cenario/Space2.png" id="2_e1b36"]
+[ext_resource type="Texture2D" uid="uid://rdmac33k2gf0" path="res://PixelArt/cenario/Space3.png" id="3_knpq1"]
+[ext_resource type="Texture2D" uid="uid://hgkae5ntcjng" path="res://PixelArt/cenario/Space4.png" id="4_r2t8c"]
+[ext_resource type="Texture2D" uid="uid://bdwyofc3ax1n" path="res://PixelArt/cenario/Space5.png" id="5_lfp8h"]
+[ext_resource type="Texture2D" uid="uid://bgpqn30dkxog7" path="res://PixelArt/cenario/Space6.png" id="6_257j0"]
+[ext_resource type="Texture2D" uid="uid://dpqfswsf4ukwg" path="res://PixelArt/cenario/Space7.png" id="7_hm2qm"]
+[ext_resource type="Texture2D" uid="uid://b2q2b7n310yfs" path="res://PixelArt/cenario/Space8.png" id="8_vkxn5"]
+[ext_resource type="Texture2D" uid="uid://b271qwnotj5sm" path="res://PixelArt/cenario/Space9.png" id="9_njjqn"]
+[ext_resource type="Texture2D" uid="uid://b3rqegjksmbh4" path="res://PixelArt/cenario/Space10.png" id="10_e0cdw"]
+[ext_resource type="Texture2D" uid="uid://jvebmjir5var" path="res://PixelArt/cenario/Space11.png" id="11_pjyok"]
+[ext_resource type="Texture2D" uid="uid://dpikjmogvag67" path="res://PixelArt/cenario/Space12.png" id="12_pjig7"]
+[ext_resource type="Texture2D" uid="uid://dikkboa3nagwt" path="res://PixelArt/cenario/Space13.png" id="13_v40v3"]
+[ext_resource type="Texture2D" uid="uid://c78ifupp0qtwx" path="res://PixelArt/cenario/Space14.png" id="14_3bl6k"]
+[ext_resource type="Texture2D" uid="uid://bch74tx044oho" path="res://PixelArt/cenario/Space15.png" id="15_lq71h"]
+[ext_resource type="Texture2D" uid="uid://bo5s8n5j5bqal" path="res://PixelArt/cenario/Space16.png" id="16_13yw2"]
+[ext_resource type="Texture2D" uid="uid://8gsnnde8uu0k" path="res://PixelArt/cenario/Space17.png" id="17_ycxgk"]
+[ext_resource type="Texture2D" uid="uid://bk2li5bkm7hjq" path="res://PixelArt/cenario/Space18.png" id="18_butdb"]
+[ext_resource type="Texture2D" uid="uid://lmdviq31lyo" path="res://PixelArt/cenario/Space19.png" id="19_grron"]
+[ext_resource type="Texture2D" uid="uid://b7ywl7sgkrhty" path="res://PixelArt/cenario/Space20.png" id="20_svc1w"]
+[ext_resource type="Texture2D" uid="uid://dd0iwl0nbf1i3" path="res://PixelArt/cenario/Space21.png" id="21_2hx2f"]
+[ext_resource type="Texture2D" uid="uid://d1ikqajmhii6s" path="res://PixelArt/cenario/Space22.png" id="22_sbxo3"]
+[ext_resource type="Texture2D" uid="uid://cg5wbfp1x4in3" path="res://PixelArt/cenario/Space23.png" id="23_00ioi"]
+[ext_resource type="PackedScene" uid="uid://2g8mv3rg5b4m" path="res://scenes/boss.tscn" id="24_dsu2a"]
+[ext_resource type="PackedScene" uid="uid://4ahvporq5mdn" path="res://scenes/playerNave.tscn" id="25_82a6u"]
+[ext_resource type="PackedScene" uid="uid://d12ui0dunvdej" path="res://scenes/barra_de_vida.tscn" id="27_knpq1"]
+[ext_resource type="PackedScene" uid="uid://dj1aobhuk5334" path="res://scenes/barra_de_vida_boss.tscn" id="28_r2t8c"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_08jik"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_03eve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_e1b36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_knpq1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_r2t8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lfp8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_257j0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hm2qm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vkxn5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_njjqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_e0cdw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_pjyok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_pjig7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_v40v3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_3bl6k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_lq71h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_13yw2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ycxgk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_butdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_grron")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_svc1w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_2hx2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_sbxo3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_00ioi")
+}],
+"loop": true,
+"name": &"animation",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ima1l"]
+size = Vector2(1407, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_03eve"]
+size = Vector2(425, 944.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e1b36"]
+size = Vector2(477, 1005)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_knpq1"]
+size = Vector2(1160, 34)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_e1b36")
+
+[node name="estrelas" type="AnimatedSprite2D" parent="."]
+position = Vector2(576.99994, 327.49997)
+scale = Vector2(1.0454544, 1.0549272)
+sprite_frames = SubResource("SpriteFrames_08jik")
+animation = &"animation"
+autoplay = "animation"
+
+[node name="boss" parent="." instance=ExtResource("24_dsu2a")]
+position = Vector2(-14, 11)
+scale = Vector2(1.0454544, 1.0549272)
+
+[node name="Character" parent="." instance=ExtResource("25_82a6u")]
+position = Vector2(586, 520)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-20, 27)
+collision_layer = 16
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(617.5, 612)
+shape = SubResource("RectangleShape2D_ima1l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-132.5, 319.25)
+shape = SubResource("RectangleShape2D_03eve")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1364.5, 307.5)
+shape = SubResource("RectangleShape2D_e1b36")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(595, -33)
+shape = SubResource("RectangleShape2D_knpq1")
+
+[node name="barra" type="CanvasLayer" parent="."]
+
+[node name="barra_de_vida" parent="barra" node_paths=PackedStringArray("alvo") instance=ExtResource("27_knpq1")]
+offset_left = 35.0
+offset_top = 597.0
+offset_right = 285.0
+offset_bottom = 609.0
+alvo = NodePath("../../Character")
+
+[node name="ProgressBar" parent="barra" node_paths=PackedStringArray("alvo") instance=ExtResource("28_r2t8c")]
+offset_left = 232.0
+offset_top = 18.0
+offset_right = 982.0
+offset_bottom = 38.0
+value = 750.0
+alvo = NodePath("../../boss")

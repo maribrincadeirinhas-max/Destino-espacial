@@ -1,0 +1,149 @@
+[gd_scene load_steps=12 format=3 uid="uid://d1rllt0vfy1jw"]
+
+[ext_resource type="Script" uid="uid://ei144xxh7ep" path="res://scripts/menu_principal.gd" id="1_jaljy"]
+[ext_resource type="Texture2D" uid="uid://dcl8qo84s3pfb" path="res://PixelArt/cenario/titulo_destinoEspacial.png" id="1_lgh5n"]
+[ext_resource type="Texture2D" uid="uid://x5dbiv08gfvg" path="res://PixelArt/cenario/entradaGame.png" id="2_jaljy"]
+[ext_resource type="Texture2D" uid="uid://cg5wbfp1x4in3" path="res://PixelArt/cenario/Space23.png" id="3_hucf5"]
+[ext_resource type="StyleBox" uid="uid://edtahfvv484o" path="res://tres/botao.tres" id="4_qswqd"]
+[ext_resource type="AudioStream" uid="uid://c0ovgmgn60h27" path="res://audio/click_de_botao.mp3" id="5_u72up"]
+[ext_resource type="StyleBox" uid="uid://demtfvi47jiii" path="res://tres/barraDeVolume1.tres" id="6_tpt6j"]
+[ext_resource type="StyleBox" uid="uid://chsim4utqv5iy" path="res://tres/barraDeVolume2.tres" id="7_kodgl"]
+[ext_resource type="StyleBox" uid="uid://mrtqr7hlq8ly" path="res://tres/barraDeVolume3.tres" id="8_icrni"]
+[ext_resource type="Script" uid="uid://bokg2fisbnugo" path="res://scripts/controle_musica.gd" id="9_shudv"]
+[ext_resource type="Script" uid="uid://c22ma8ta273dm" path="res://scripts/controle_sonoro.gd" id="10_xrwco"]
+
+[node name="menu_principal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jaljy")
+
+[node name="TituloDestinoEspacial" type="Sprite2D" parent="."]
+position = Vector2(252.00002, 168)
+scale = Vector2(1.7806324, 1.6912569)
+texture = ExtResource("1_lgh5n")
+
+[node name="EntradaGame" type="Sprite2D" parent="."]
+position = Vector2(453, 386)
+rotation = -0.04166364
+scale = Vector2(3.0447006, 3.2896144)
+texture = ExtResource("2_jaljy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -5
+position = Vector2(581, 334.67657)
+scale = Vector2(1.0886502, 1.1028221)
+texture = ExtResource("3_hucf5")
+
+[node name="botoes_principais" type="VBoxContainer" parent="."]
+z_index = -4
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 111.0
+offset_top = -250.0
+offset_right = 406.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="play" type="Button" parent="botoes_principais"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_styles/normal = ExtResource("4_qswqd")
+text = "Jogar"
+
+[node name="opcoes" type="Button" parent="botoes_principais"]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("4_qswqd")
+text = "Opções"
+
+[node name="sair" type="Button" parent="botoes_principais"]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("4_qswqd")
+text = "Sair"
+
+[node name="som_button" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_u72up")
+
+[node name="opcoes" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 72.0
+offset_top = -201.0
+offset_right = 432.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="opcoes"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="opcoes/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Opções"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="opcoes/VBoxContainer"]
+layout_mode = 2
+text = "Música:"
+
+[node name="controle_musica" type="HSlider" parent="opcoes/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/slider = ExtResource("6_tpt6j")
+theme_override_styles/grabber_area = ExtResource("7_kodgl")
+theme_override_styles/grabber_area_highlight = ExtResource("8_icrni")
+max_value = 1.0
+step = 0.01
+value = 0.8
+script = ExtResource("9_shudv")
+audio_nome = "Music"
+
+[node name="Label3" type="Label" parent="opcoes/VBoxContainer"]
+layout_mode = 2
+text = "
+Efeitos sonoros:"
+
+[node name="controle_sonoro" type="HSlider" parent="opcoes/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/slider = ExtResource("6_tpt6j")
+theme_override_styles/grabber_area = ExtResource("7_kodgl")
+theme_override_styles/grabber_area_highlight = ExtResource("8_icrni")
+max_value = 1.0
+step = 0.01
+value = 0.5
+script = ExtResource("10_xrwco")
+audio_nome = "SFX"
+
+[node name="sair_das_opcoes" type="Button" parent="opcoes/VBoxContainer"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_styles/normal = ExtResource("4_qswqd")
+text = "Voltar"
+
+[connection signal="button_down" from="botoes_principais/play" to="." method="_on_play_button_down"]
+[connection signal="mouse_entered" from="botoes_principais/play" to="." method="_on_play_mouse_entered"]
+[connection signal="button_down" from="botoes_principais/opcoes" to="." method="_on_opcoes_button_down"]
+[connection signal="mouse_entered" from="botoes_principais/opcoes" to="." method="_on_opcoes_mouse_entered"]
+[connection signal="button_down" from="botoes_principais/sair" to="." method="_on_sair_button_down"]
+[connection signal="mouse_entered" from="botoes_principais/sair" to="." method="_on_sair_mouse_entered"]
+[connection signal="value_changed" from="opcoes/VBoxContainer/controle_musica" to="opcoes/VBoxContainer/controle_musica" method="_on_value_changed"]
+[connection signal="value_changed" from="opcoes/VBoxContainer/controle_sonoro" to="opcoes/VBoxContainer/controle_sonoro" method="_on_value_changed"]
+[connection signal="button_down" from="opcoes/VBoxContainer/sair_das_opcoes" to="." method="_on_sair_das_opcoes_button_down"]
+[connection signal="mouse_entered" from="opcoes/VBoxContainer/sair_das_opcoes" to="." method="_on_sair_das_opcoes_mouse_entered"]

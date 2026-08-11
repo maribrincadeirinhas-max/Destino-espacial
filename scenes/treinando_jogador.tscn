@@ -1,0 +1,318 @@
+[gd_scene load_steps=37 format=3 uid="uid://b3cnaxtujl2ib"]
+
+[ext_resource type="Script" uid="uid://lu4iq35raefw" path="res://scripts/treinando_jogador.gd" id="1_sm21v"]
+[ext_resource type="Texture2D" uid="uid://clyg8j6dxqxad" path="res://PixelArt/cenario/Space1.png" id="2_vfi6j"]
+[ext_resource type="Texture2D" uid="uid://ckxcimyrt1l6l" path="res://PixelArt/cenario/Space2.png" id="3_2rl80"]
+[ext_resource type="Texture2D" uid="uid://rdmac33k2gf0" path="res://PixelArt/cenario/Space3.png" id="4_2qpr4"]
+[ext_resource type="Texture2D" uid="uid://hgkae5ntcjng" path="res://PixelArt/cenario/Space4.png" id="5_f35w0"]
+[ext_resource type="Texture2D" uid="uid://bdwyofc3ax1n" path="res://PixelArt/cenario/Space5.png" id="6_ea3u4"]
+[ext_resource type="Texture2D" uid="uid://bgpqn30dkxog7" path="res://PixelArt/cenario/Space6.png" id="7_5rlsu"]
+[ext_resource type="Texture2D" uid="uid://dpqfswsf4ukwg" path="res://PixelArt/cenario/Space7.png" id="8_b21tu"]
+[ext_resource type="Texture2D" uid="uid://b2q2b7n310yfs" path="res://PixelArt/cenario/Space8.png" id="9_xshw1"]
+[ext_resource type="Texture2D" uid="uid://b271qwnotj5sm" path="res://PixelArt/cenario/Space9.png" id="10_1k65o"]
+[ext_resource type="Texture2D" uid="uid://b3rqegjksmbh4" path="res://PixelArt/cenario/Space10.png" id="11_fih65"]
+[ext_resource type="Texture2D" uid="uid://jvebmjir5var" path="res://PixelArt/cenario/Space11.png" id="12_se5k4"]
+[ext_resource type="Texture2D" uid="uid://dpikjmogvag67" path="res://PixelArt/cenario/Space12.png" id="13_4ps3i"]
+[ext_resource type="Texture2D" uid="uid://dikkboa3nagwt" path="res://PixelArt/cenario/Space13.png" id="14_ditm4"]
+[ext_resource type="Texture2D" uid="uid://c78ifupp0qtwx" path="res://PixelArt/cenario/Space14.png" id="15_2x0to"]
+[ext_resource type="Texture2D" uid="uid://bch74tx044oho" path="res://PixelArt/cenario/Space15.png" id="16_wcsuu"]
+[ext_resource type="Texture2D" uid="uid://bo5s8n5j5bqal" path="res://PixelArt/cenario/Space16.png" id="17_p2mo4"]
+[ext_resource type="Texture2D" uid="uid://8gsnnde8uu0k" path="res://PixelArt/cenario/Space17.png" id="18_r62sj"]
+[ext_resource type="Texture2D" uid="uid://bk2li5bkm7hjq" path="res://PixelArt/cenario/Space18.png" id="19_7a477"]
+[ext_resource type="Texture2D" uid="uid://lmdviq31lyo" path="res://PixelArt/cenario/Space19.png" id="20_q2v5t"]
+[ext_resource type="Texture2D" uid="uid://b7ywl7sgkrhty" path="res://PixelArt/cenario/Space20.png" id="21_1oaqn"]
+[ext_resource type="Texture2D" uid="uid://dd0iwl0nbf1i3" path="res://PixelArt/cenario/Space21.png" id="22_w63pw"]
+[ext_resource type="Texture2D" uid="uid://d1ikqajmhii6s" path="res://PixelArt/cenario/Space22.png" id="23_boc3s"]
+[ext_resource type="Texture2D" uid="uid://cg5wbfp1x4in3" path="res://PixelArt/cenario/Space23.png" id="24_6tmtb"]
+[ext_resource type="Texture2D" uid="uid://r3m5cepg4rep" path="res://PixelArt/mouse/ensinandoJogador1.png" id="25_hyw4d"]
+[ext_resource type="PackedScene" uid="uid://4ahvporq5mdn" path="res://scenes/playerNave.tscn" id="25_vfi6j"]
+[ext_resource type="StyleBox" uid="uid://edtahfvv484o" path="res://tres/botao.tres" id="26_0wxrn"]
+[ext_resource type="Texture2D" uid="uid://ujpl82d5ab0e" path="res://PixelArt/mouse/ensinandoJogador2.png" id="27_nt4x4"]
+[ext_resource type="Texture2D" uid="uid://b5vf4ysrgp4e4" path="res://PixelArt/mouse/ensinandoJogador3.png" id="28_arvv6"]
+[ext_resource type="AudioStream" uid="uid://c0ovgmgn60h27" path="res://audio/click_de_botao.mp3" id="30_2rl80"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nkikn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vfi6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2rl80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2qpr4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_f35w0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ea3u4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5rlsu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_b21tu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xshw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_1k65o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_fih65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_se5k4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_4ps3i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ditm4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_2x0to")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_wcsuu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_p2mo4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_r62sj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_7a477")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_q2v5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_1oaqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_w63pw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_boc3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_6tmtb")
+}],
+"loop": true,
+"name": &"espaco",
+"speed": 13.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l3o25"]
+size = Vector2(1407, 224)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t1rlu"]
+size = Vector2(425, 944.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8thaw"]
+size = Vector2(477, 1005)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s6bwa"]
+size = Vector2(1160, 180)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1cu1e"]
+bg_color = Color(0.038030464, 0.32837757, 0.5164504, 0.67058825)
+
+[node name="treinando_jogador" type="Node2D"]
+script = ExtResource("1_sm21v")
+
+[node name="cenario" type="AnimatedSprite2D" parent="."]
+position = Vector2(582.5, 331.75)
+scale = Vector2(1.0681819, 1.0831987)
+sprite_frames = SubResource("SpriteFrames_nkikn")
+animation = &"espaco"
+autoplay = "espaco"
+frame = 3
+frame_progress = 0.3526451
+
+[node name="Nave" parent="." instance=ExtResource("25_vfi6j")]
+position = Vector2(559, 345)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-20, 27)
+collision_layer = 16
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(617.5, 716)
+shape = SubResource("RectangleShape2D_l3o25")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-132.5, 319.25)
+shape = SubResource("RectangleShape2D_t1rlu")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1364.5, 307.5)
+shape = SubResource("RectangleShape2D_8thaw")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(580, -110)
+shape = SubResource("RectangleShape2D_s6bwa")
+
+[node name="ensinando_1" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(200, 150)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 73.99994
+offset_top = 27.0
+offset_right = 386.99994
+offset_bottom = 326.82104
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0406879, 1.0239441)
+theme_override_styles/panel = SubResource("StyleBoxFlat_1cu1e")
+metadata/_edit_group_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ensinando_1"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ensinando_1/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Aperte o botão esquerdo
+do mouse para atirar."
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="ensinando_1/VBoxContainer"]
+position = Vector2(158.549, 160.16496)
+scale = Vector2(2.9623137, 2.8739276)
+texture = ExtResource("25_hyw4d")
+
+[node name="ok1" type="Button" parent="ensinando_1/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_styles/normal = ExtResource("26_0wxrn")
+text = "OK"
+
+[node name="ensinando_2" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(200, 150)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 745.0
+offset_top = 27.0
+offset_right = 1058.0
+offset_bottom = 326.82104
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0406879, 1.0239441)
+theme_override_styles/panel = SubResource("StyleBoxFlat_1cu1e")
+metadata/_edit_group_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ensinando_2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ensinando_2/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Aperte o botão direito
+do mouse para voar alto."
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="ensinando_2/VBoxContainer"]
+position = Vector2(158.549, 160.16496)
+scale = Vector2(2.9623137, 2.8739276)
+texture = ExtResource("27_nt4x4")
+
+[node name="ok2" type="Button" parent="ensinando_2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_styles/normal = ExtResource("26_0wxrn")
+text = "OK"
+
+[node name="ensinando_3" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(200, 150)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 71.99994
+offset_top = 25.0
+offset_right = 384.99994
+offset_bottom = 324.82104
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0406879, 1.0239441)
+theme_override_styles/panel = SubResource("StyleBoxFlat_1cu1e")
+metadata/_edit_group_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ensinando_3"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ensinando_3/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Gire a bolinha do mouse
+para se defender."
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="ensinando_3/VBoxContainer"]
+position = Vector2(158.549, 160.16496)
+scale = Vector2(2.9623137, 2.8739276)
+texture = ExtResource("28_arvv6")
+
+[node name="ok3" type="Button" parent="ensinando_3/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_styles/normal = ExtResource("26_0wxrn")
+text = "OK"
+
+[node name="pronto" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(200, 150)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 476.99997
+offset_top = 35.0
+offset_right = 701.0
+offset_bottom = 185.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0406879, 1.0239441)
+theme_override_styles/panel = SubResource("StyleBoxFlat_1cu1e")
+metadata/_edit_group_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="pronto"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="pronto/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Você está pronto?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pronto" type="Button" parent="pronto/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_styles/normal = ExtResource("26_0wxrn")
+text = "Sim"
+
+[node name="som_button" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("30_2rl80")
+
+[connection signal="button_down" from="ensinando_1/VBoxContainer/ok1" to="." method="_on_ok_1_button_down"]
+[connection signal="mouse_entered" from="ensinando_1/VBoxContainer/ok1" to="." method="_on_ok_1_mouse_entered"]
+[connection signal="button_down" from="ensinando_2/VBoxContainer/ok2" to="." method="_on_ok_2_button_down"]
+[connection signal="mouse_entered" from="ensinando_2/VBoxContainer/ok2" to="." method="_on_ok_2_mouse_entered"]
+[connection signal="button_down" from="ensinando_3/VBoxContainer/ok3" to="." method="_on_ok_3_button_down"]
+[connection signal="mouse_entered" from="ensinando_3/VBoxContainer/ok3" to="." method="_on_ok_3_mouse_entered"]
+[connection signal="button_down" from="pronto/VBoxContainer/pronto" to="." method="_on_pronto_button_down"]
+[connection signal="mouse_entered" from="pronto/VBoxContainer/pronto" to="." method="_on_pronto_mouse_entered"]

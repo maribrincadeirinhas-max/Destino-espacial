@@ -1,0 +1,4 @@
+**Eu gostaria de melhorar os buttons;
+**Arrumar o som de explosão do boss;
+**Adicionar mais estados ao boss com o AnimationPlayer;
+**Fazer nova tela de apresentação.

@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://2g8mv3rg5b4m"]
+[gd_scene format=3 uid="uid://2g8mv3rg5b4m"]
 
 [ext_resource type="Script" uid="uid://ccfdsvj53vjjb" path="res://scripts/boss.gd" id="1_r3bxh"]
 [ext_resource type="Texture2D" uid="uid://dfgcwxbqd34yh" path="res://PixelArt/bossPixel/bossSpace.png" id="2_neq0i"]
@@ -174,7 +174,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0onds")
 }],
-"loop": false,
+"loop": 0,
 "name": &"ataque_basico_abrir",
 "speed": 6.0
 }, {
@@ -194,7 +194,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mautr")
 }],
-"loop": false,
+"loop": 0,
 "name": &"ataque_basico_fechar",
 "speed": 6.0
 }, {
@@ -211,7 +211,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_hhysf")
 }],
-"loop": false,
+"loop": 0,
 "name": &"derrotado",
 "speed": 3.0
 }, {
@@ -228,7 +228,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4dlq0")
 }],
-"loop": false,
+"loop": 0,
 "name": &"especial _ida",
 "speed": 6.0
 }, {
@@ -245,7 +245,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bagrn")
 }],
-"loop": false,
+"loop": 0,
 "name": &"especial_volta",
 "speed": 6.0
 }, {
@@ -322,7 +322,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_tj5kv")
 }],
-"loop": false,
+"loop": 0,
 "name": &"estatico",
 "speed": 7.0
 }]
@@ -351,7 +351,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_lngmi")
 }],
-"loop": false,
+"loop": 0,
 "name": &"ida_central",
 "speed": 5.0
 }]
@@ -406,11 +406,11 @@ size = Vector2(62.37195, 87.093994)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gqd3i"]
 size = Vector2(96.602295, 38.52014)
 
-[node name="inimigo" type="CharacterBody2D"]
+[node name="inimigo" type="CharacterBody2D" unique_id=717957413]
 collision_layer = 2
 script = ExtResource("1_r3bxh")
 
-[node name="boss" type="AnimatedSprite2D" parent="."]
+[node name="boss" type="AnimatedSprite2D" parent="." unique_id=1071617896]
 material = SubResource("ShaderMaterial_wqpjq")
 position = Vector2(575, 315)
 sprite_frames = SubResource("SpriteFrames_hh0fu")
@@ -418,113 +418,113 @@ animation = &"especial _ida"
 frame = 3
 frame_progress = 0.307346
 
-[node name="especial_ida" type="AnimatedSprite2D" parent="."]
+[node name="especial_ida" type="AnimatedSprite2D" parent="." unique_id=1492562637]
 position = Vector2(574, 416)
 sprite_frames = SubResource("SpriteFrames_q24ql")
 animation = &"ida_central"
 frame = 2
 frame_progress = 1.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=82569928]
 position = Vector2(575, 136)
 shape = SubResource("CircleShape2D_pbxxu")
 
-[node name="bosshitbox" type="Area2D" parent="."]
+[node name="bosshitbox" type="Area2D" parent="." unique_id=954462085]
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="bosshitbox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bosshitbox" unique_id=302564367]
 z_index = 1
 position = Vector2(575, 70)
 shape = SubResource("CircleShape2D_r3bxh")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="bosshitbox"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="bosshitbox" unique_id=415755613]
 position = Vector2(469.38565, 145.6708)
 rotation = -0.7500191
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_r3bxh")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="bosshitbox"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="bosshitbox" unique_id=510634603]
 position = Vector2(288.75, 192.5)
 shape = SubResource("RectangleShape2D_wqpjq")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="bosshitbox"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="bosshitbox" unique_id=1366076691]
 position = Vector2(572.75, 138)
 shape = SubResource("RectangleShape2D_2cdgk")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="bosshitbox"]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="bosshitbox" unique_id=1424117013]
 position = Vector2(268, 264)
 rotation = 1.447202
 shape = SubResource("CapsuleShape2D_qsl3t")
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="bosshitbox"]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="bosshitbox" unique_id=1315096993]
 position = Vector2(381.3517, 241.05833)
 rotation = 2.3675306
 shape = SubResource("RectangleShape2D_2avx2")
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="bosshitbox"]
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="bosshitbox" unique_id=962189847]
 position = Vector2(172, 251.99998)
 rotation = -0.4011727
 shape = SubResource("RectangleShape2D_5f346")
 
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="bosshitbox"]
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="bosshitbox" unique_id=248521381]
 position = Vector2(544, 178)
 shape = SubResource("CircleShape2D_wqpjq")
 
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="bosshitbox"]
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="bosshitbox" unique_id=1208459210]
 position = Vector2(606, 178)
 shape = SubResource("CircleShape2D_2cdgk")
 
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="bosshitbox"]
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="bosshitbox" unique_id=218532504]
 position = Vector2(574, 181)
 shape = SubResource("RectangleShape2D_qsl3t")
 
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="bosshitbox"]
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="bosshitbox" unique_id=1692474620]
 position = Vector2(684.89496, 148.04619)
 rotation = -2.4366992
 shape = SubResource("RectangleShape2D_0onds")
 
-[node name="CollisionShape2D12" type="CollisionShape2D" parent="bosshitbox"]
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="bosshitbox" unique_id=1205135961]
 position = Vector2(871.75, 198.5)
 shape = SubResource("RectangleShape2D_lfs1x")
 
-[node name="CollisionShape2D13" type="CollisionShape2D" parent="bosshitbox"]
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="bosshitbox" unique_id=1311149825]
 position = Vector2(874, 265.00003)
 rotation = -4.314602
 shape = SubResource("CapsuleShape2D_8eiau")
 
-[node name="CollisionShape2D14" type="CollisionShape2D" parent="bosshitbox"]
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="bosshitbox" unique_id=823844171]
 position = Vector2(971.21216, 246.56616)
 rotation = 0.53875744
 shape = SubResource("RectangleShape2D_vn2fc")
 
-[node name="CollisionShape2D15" type="CollisionShape2D" parent="bosshitbox"]
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="bosshitbox" unique_id=1229336093]
 position = Vector2(768, 242.00002)
 rotation = 0.8645005
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_gqd3i")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=984010725]
 
-[node name="teleguiados" type="Node" parent="."]
+[node name="teleguiados" type="Node" parent="." unique_id=1450401761]
 
-[node name="esquerda1" type="Marker2D" parent="teleguiados"]
+[node name="esquerda1" type="Marker2D" parent="teleguiados" unique_id=1764755980]
 position = Vector2(432, 130)
 
-[node name="esquerda2" type="Marker2D" parent="teleguiados"]
+[node name="esquerda2" type="Marker2D" parent="teleguiados" unique_id=849806111]
 position = Vector2(452, 125)
 
-[node name="direita1" type="Marker2D" parent="teleguiados"]
+[node name="direita1" type="Marker2D" parent="teleguiados" unique_id=2015231577]
 position = Vector2(720, 127)
 
-[node name="direita2" type="Marker2D" parent="teleguiados"]
+[node name="direita2" type="Marker2D" parent="teleguiados" unique_id=2057262225]
 position = Vector2(701, 125)
 
-[node name="central" type="Node" parent="."]
+[node name="central" type="Node" parent="." unique_id=2083917909]
 
-[node name="localEspecial" type="Marker2D" parent="central"]
+[node name="localEspecial" type="Marker2D" parent="central" unique_id=31994155]
 position = Vector2(575, 416)
 
-[node name="explosao" type="AudioStreamPlayer2D" parent="."]
+[node name="explosao" type="AudioStreamPlayer2D" parent="." unique_id=1848830867]
 stream = ExtResource("4_qnbj4")
 
 [connection signal="area_entered" from="bosshitbox" to="." method="_on_bosshitbox_area_entered"]

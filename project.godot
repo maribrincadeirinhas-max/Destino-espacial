@@ -24,6 +24,11 @@ config/icon="res://icon.svg"
 GameSystem="*res://scripts/gameSystem.gd"
 Music="*res://scenes/music.tscn"
 
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
 [global_group]
 
 bossDano=""

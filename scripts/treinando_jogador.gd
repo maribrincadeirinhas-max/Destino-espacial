@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 @onready var ensinando_1: PanelContainer = $ensinando_1
 @onready var ensinando_2: PanelContainer = $ensinando_2

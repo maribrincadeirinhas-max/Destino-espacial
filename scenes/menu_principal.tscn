@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://d1rllt0vfy1jw"]
+[gd_scene format=3 uid="uid://d1rllt0vfy1jw"]
 
 [ext_resource type="Script" uid="uid://ei144xxh7ep" path="res://scripts/menu_principal.gd" id="1_jaljy"]
 [ext_resource type="Texture2D" uid="uid://dcl8qo84s3pfb" path="res://PixelArt/cenario/titulo_destinoEspacial.png" id="1_lgh5n"]
@@ -12,33 +12,41 @@
 [ext_resource type="Script" uid="uid://bokg2fisbnugo" path="res://scripts/controle_musica.gd" id="9_shudv"]
 [ext_resource type="Script" uid="uid://c22ma8ta273dm" path="res://scripts/controle_sonoro.gd" id="10_xrwco"]
 
-[node name="menu_principal" type="Control"]
+[node name="menu_principal" type="Control" unique_id=1203415640]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_jaljy")
 
-[node name="TituloDestinoEspacial" type="Sprite2D" parent="."]
+[node name="TituloDestinoEspacial" type="Sprite2D" parent="." unique_id=82047245]
 position = Vector2(252.00002, 168)
 scale = Vector2(1.7806324, 1.6912569)
 texture = ExtResource("1_lgh5n")
 
-[node name="EntradaGame" type="Sprite2D" parent="."]
+[node name="EntradaGame" type="Sprite2D" parent="." unique_id=572174230]
 position = Vector2(453, 386)
 rotation = -0.04166364
-scale = Vector2(3.0447006, 3.2896144)
+scale = Vector2(3.0447009, 3.2896147)
 texture = ExtResource("2_jaljy")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=781275070]
 z_index = -5
 position = Vector2(581, 334.67657)
 scale = Vector2(1.0886502, 1.1028221)
 texture = ExtResource("3_hucf5")
 
-[node name="botoes_principais" type="VBoxContainer" parent="."]
+[node name="botoes_principais" type="VBoxContainer" parent="." unique_id=1559149529]
 z_index = -4
 layout_mode = 1
 anchors_preset = 8
@@ -55,26 +63,26 @@ grow_vertical = 2
 mouse_filter = 2
 alignment = 1
 
-[node name="play" type="Button" parent="botoes_principais"]
+[node name="play" type="Button" parent="botoes_principais" unique_id=941599797]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
 theme_override_styles/normal = ExtResource("4_qswqd")
 text = "Jogar"
 
-[node name="opcoes" type="Button" parent="botoes_principais"]
+[node name="opcoes" type="Button" parent="botoes_principais" unique_id=67853853]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("4_qswqd")
 text = "Opções"
 
-[node name="sair" type="Button" parent="botoes_principais"]
+[node name="sair" type="Button" parent="botoes_principais" unique_id=2135644792]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("4_qswqd")
 text = "Sair"
 
-[node name="som_button" type="AudioStreamPlayer2D" parent="."]
+[node name="som_button" type="AudioStreamPlayer2D" parent="." unique_id=1231723438]
 stream = ExtResource("5_u72up")
 
-[node name="opcoes" type="PanelContainer" parent="."]
+[node name="opcoes" type="PanelContainer" parent="." unique_id=1995833192]
 custom_minimum_size = Vector2(200, 150)
 layout_mode = 1
 anchors_preset = 8
@@ -89,20 +97,20 @@ offset_bottom = 47.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="opcoes"]
+[node name="VBoxContainer" type="VBoxContainer" parent="opcoes" unique_id=1216077301]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="opcoes/VBoxContainer"]
+[node name="Label" type="Label" parent="opcoes/VBoxContainer" unique_id=1171105617]
 layout_mode = 2
 theme_override_font_sizes/font_size = 26
 text = "Opções"
 horizontal_alignment = 1
 
-[node name="Label2" type="Label" parent="opcoes/VBoxContainer"]
+[node name="Label2" type="Label" parent="opcoes/VBoxContainer" unique_id=1970969140]
 layout_mode = 2
 text = "Música:"
 
-[node name="controle_musica" type="HSlider" parent="opcoes/VBoxContainer"]
+[node name="controle_musica" type="HSlider" parent="opcoes/VBoxContainer" unique_id=509980603]
 layout_mode = 2
 theme_override_styles/slider = ExtResource("6_tpt6j")
 theme_override_styles/grabber_area = ExtResource("7_kodgl")
@@ -113,12 +121,12 @@ value = 0.8
 script = ExtResource("9_shudv")
 audio_nome = "Music"
 
-[node name="Label3" type="Label" parent="opcoes/VBoxContainer"]
+[node name="Label3" type="Label" parent="opcoes/VBoxContainer" unique_id=197989866]
 layout_mode = 2
 text = "
 Efeitos sonoros:"
 
-[node name="controle_sonoro" type="HSlider" parent="opcoes/VBoxContainer"]
+[node name="controle_sonoro" type="HSlider" parent="opcoes/VBoxContainer" unique_id=2082811177]
 layout_mode = 2
 theme_override_styles/slider = ExtResource("6_tpt6j")
 theme_override_styles/grabber_area = ExtResource("7_kodgl")
@@ -129,7 +137,7 @@ value = 0.5
 script = ExtResource("10_xrwco")
 audio_nome = "SFX"
 
-[node name="sair_das_opcoes" type="Button" parent="opcoes/VBoxContainer"]
+[node name="sair_das_opcoes" type="Button" parent="opcoes/VBoxContainer" unique_id=662851894]
 custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
 size_flags_horizontal = 4

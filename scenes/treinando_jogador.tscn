@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://b3cnaxtujl2ib"]
+[gd_scene format=3 uid="uid://b3cnaxtujl2ib"]
 
 [ext_resource type="Script" uid="uid://lu4iq35raefw" path="res://scripts/treinando_jogador.gd" id="1_sm21v"]
 [ext_resource type="Texture2D" uid="uid://clyg8j6dxqxad" path="res://PixelArt/cenario/Space1.png" id="2_vfi6j"]
@@ -103,7 +103,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("24_6tmtb")
 }],
-"loop": true,
+"loop": 1,
 "name": &"espaco",
 "speed": 13.0
 }]
@@ -123,10 +123,19 @@ size = Vector2(1160, 180)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1cu1e"]
 bg_color = Color(0.038030464, 0.32837757, 0.5164504, 0.67058825)
 
-[node name="treinando_jogador" type="Node2D"]
+[node name="treinando_jogador" type="Control" unique_id=1013838467]
+layout_mode = 3
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = -576.0
+offset_bottom = -324.0
 script = ExtResource("1_sm21v")
 
-[node name="cenario" type="AnimatedSprite2D" parent="."]
+[node name="cenario" type="AnimatedSprite2D" parent="." unique_id=2080822200]
 position = Vector2(582.5, 331.75)
 scale = Vector2(1.0681819, 1.0831987)
 sprite_frames = SubResource("SpriteFrames_nkikn")
@@ -135,31 +144,32 @@ autoplay = "espaco"
 frame = 3
 frame_progress = 0.3526451
 
-[node name="Nave" parent="." instance=ExtResource("25_vfi6j")]
+[node name="Nave" parent="." unique_id=1318594363 instance=ExtResource("25_vfi6j")]
 position = Vector2(559, 345)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=900211506]
 position = Vector2(-20, 27)
 collision_layer = 16
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1272218983]
 position = Vector2(617.5, 716)
 shape = SubResource("RectangleShape2D_l3o25")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1834553008]
 position = Vector2(-132.5, 319.25)
 shape = SubResource("RectangleShape2D_t1rlu")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=308850149]
 position = Vector2(1364.5, 307.5)
 shape = SubResource("RectangleShape2D_8thaw")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=602262760]
 position = Vector2(580, -110)
 shape = SubResource("RectangleShape2D_s6bwa")
 
-[node name="ensinando_1" type="PanelContainer" parent="."]
+[node name="ensinando_1" type="PanelContainer" parent="." unique_id=1770239688]
 custom_minimum_size = Vector2(200, 150)
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -175,29 +185,30 @@ scale = Vector2(1.0406879, 1.0239441)
 theme_override_styles/panel = SubResource("StyleBoxFlat_1cu1e")
 metadata/_edit_group_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ensinando_1"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ensinando_1" unique_id=1800597899]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="ensinando_1/VBoxContainer"]
+[node name="Label" type="Label" parent="ensinando_1/VBoxContainer" unique_id=785781005]
 layout_mode = 2
 theme_override_font_sizes/font_size = 26
 text = "Aperte o botão esquerdo
 do mouse para atirar."
 horizontal_alignment = 1
 
-[node name="Sprite2D" type="Sprite2D" parent="ensinando_1/VBoxContainer"]
+[node name="Sprite2D" type="Sprite2D" parent="ensinando_1/VBoxContainer" unique_id=642671357]
 position = Vector2(158.549, 160.16496)
 scale = Vector2(2.9623137, 2.8739276)
 texture = ExtResource("25_hyw4d")
 
-[node name="ok1" type="Button" parent="ensinando_1/VBoxContainer"]
+[node name="ok1" type="Button" parent="ensinando_1/VBoxContainer" unique_id=1981289838]
 layout_mode = 2
 size_flags_vertical = 10
 theme_override_styles/normal = ExtResource("26_0wxrn")
 text = "OK"
 
-[node name="ensinando_2" type="PanelContainer" parent="."]
+[node name="ensinando_2" type="PanelContainer" parent="." unique_id=2076731875]
 custom_minimum_size = Vector2(200, 150)
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -213,29 +224,30 @@ scale = Vector2(1.0406879, 1.0239441)
 theme_override_styles/panel = SubResource("StyleBoxFlat_1cu1e")
 metadata/_edit_group_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ensinando_2"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ensinando_2" unique_id=286002053]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="ensinando_2/VBoxContainer"]
+[node name="Label" type="Label" parent="ensinando_2/VBoxContainer" unique_id=2024954499]
 layout_mode = 2
 theme_override_font_sizes/font_size = 26
 text = "Aperte o botão direito
 do mouse para voar alto."
 horizontal_alignment = 1
 
-[node name="Sprite2D" type="Sprite2D" parent="ensinando_2/VBoxContainer"]
+[node name="Sprite2D" type="Sprite2D" parent="ensinando_2/VBoxContainer" unique_id=1198652682]
 position = Vector2(158.549, 160.16496)
 scale = Vector2(2.9623137, 2.8739276)
 texture = ExtResource("27_nt4x4")
 
-[node name="ok2" type="Button" parent="ensinando_2/VBoxContainer"]
+[node name="ok2" type="Button" parent="ensinando_2/VBoxContainer" unique_id=1816137066]
 layout_mode = 2
 size_flags_vertical = 10
 theme_override_styles/normal = ExtResource("26_0wxrn")
 text = "OK"
 
-[node name="ensinando_3" type="PanelContainer" parent="."]
+[node name="ensinando_3" type="PanelContainer" parent="." unique_id=932869015]
 custom_minimum_size = Vector2(200, 150)
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -251,29 +263,30 @@ scale = Vector2(1.0406879, 1.0239441)
 theme_override_styles/panel = SubResource("StyleBoxFlat_1cu1e")
 metadata/_edit_group_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ensinando_3"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ensinando_3" unique_id=951856529]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="ensinando_3/VBoxContainer"]
+[node name="Label" type="Label" parent="ensinando_3/VBoxContainer" unique_id=118611933]
 layout_mode = 2
 theme_override_font_sizes/font_size = 26
 text = "Gire a bolinha do mouse
 para se defender."
 horizontal_alignment = 1
 
-[node name="Sprite2D" type="Sprite2D" parent="ensinando_3/VBoxContainer"]
+[node name="Sprite2D" type="Sprite2D" parent="ensinando_3/VBoxContainer" unique_id=433016803]
 position = Vector2(158.549, 160.16496)
 scale = Vector2(2.9623137, 2.8739276)
 texture = ExtResource("28_arvv6")
 
-[node name="ok3" type="Button" parent="ensinando_3/VBoxContainer"]
+[node name="ok3" type="Button" parent="ensinando_3/VBoxContainer" unique_id=1345571305]
 layout_mode = 2
 size_flags_vertical = 10
 theme_override_styles/normal = ExtResource("26_0wxrn")
 text = "OK"
 
-[node name="pronto" type="PanelContainer" parent="."]
+[node name="pronto" type="PanelContainer" parent="." unique_id=1317746304]
 custom_minimum_size = Vector2(200, 150)
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -289,23 +302,23 @@ scale = Vector2(1.0406879, 1.0239441)
 theme_override_styles/panel = SubResource("StyleBoxFlat_1cu1e")
 metadata/_edit_group_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="pronto"]
+[node name="VBoxContainer" type="VBoxContainer" parent="pronto" unique_id=345856461]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="pronto/VBoxContainer"]
+[node name="Label" type="Label" parent="pronto/VBoxContainer" unique_id=420952986]
 layout_mode = 2
 theme_override_font_sizes/font_size = 26
 text = "Você está pronto?"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="pronto" type="Button" parent="pronto/VBoxContainer"]
+[node name="pronto" type="Button" parent="pronto/VBoxContainer" unique_id=98670707]
 layout_mode = 2
 size_flags_vertical = 10
 theme_override_styles/normal = ExtResource("26_0wxrn")
 text = "Sim"
 
-[node name="som_button" type="AudioStreamPlayer2D" parent="."]
+[node name="som_button" type="AudioStreamPlayer2D" parent="." unique_id=1885837427]
 stream = ExtResource("30_2rl80")
 
 [connection signal="button_down" from="ensinando_1/VBoxContainer/ok1" to="." method="_on_ok_1_button_down"]

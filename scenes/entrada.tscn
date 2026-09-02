@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cm6oo3ppskfgi"]
+[gd_scene format=3 uid="uid://cm6oo3ppskfgi"]
 
 [ext_resource type="Texture2D" uid="uid://cg5wbfp1x4in3" path="res://PixelArt/cenario/Space23.png" id="1_6o43v"]
 [ext_resource type="Script" uid="uid://gmbfpa0x3o4" path="res://scripts/entrada_menu.gd" id="1_dd0tp"]
@@ -88,35 +88,41 @@ _data = {
 &"tela_preta": SubResource("Animation_nlxho")
 }
 
-[node name="entrada" type="Control"]
+[node name="entrada" type="Control" unique_id=1923161926]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_dd0tp")
 
-[node name="TituloDestinoEspacial" type="Sprite2D" parent="."]
+[node name="TituloDestinoEspacial" type="Sprite2D" parent="." unique_id=1528126014]
 position = Vector2(252.00002, 168)
 scale = Vector2(1.7806324, 1.6912569)
 texture = ExtResource("2_w0jmx")
 
-[node name="EntradaGame" type="Sprite2D" parent="."]
+[node name="EntradaGame" type="Sprite2D" parent="." unique_id=862793482]
 position = Vector2(453, 386)
 rotation = -0.04166364
 scale = Vector2(3.0447006, 3.2896144)
 texture = ExtResource("3_mrf02")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1467723634]
 z_index = -5
 position = Vector2(581, 334.67657)
 scale = Vector2(1.0886502, 1.1028221)
 texture = ExtResource("1_6o43v")
 
-[node name="botoes_principais" type="VBoxContainer" parent="."]
+[node name="botoes_principais" type="VBoxContainer" parent="." unique_id=1407369277]
 z_index = -4
 layout_mode = 1
 anchors_preset = 8
@@ -133,26 +139,26 @@ grow_vertical = 2
 mouse_filter = 2
 alignment = 1
 
-[node name="play" type="Button" parent="botoes_principais"]
+[node name="play" type="Button" parent="botoes_principais" unique_id=932367513]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
 theme_override_styles/normal = ExtResource("5_dd0tp")
 text = "Jogar"
 
-[node name="opcoes" type="Button" parent="botoes_principais"]
+[node name="opcoes" type="Button" parent="botoes_principais" unique_id=2098624044]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_dd0tp")
 text = "Opções"
 
-[node name="sair" type="Button" parent="botoes_principais"]
+[node name="sair" type="Button" parent="botoes_principais" unique_id=1693135629]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("5_dd0tp")
 text = "Sair"
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=2017717992]
 one_shot = true
 
-[node name="Entrada" type="VBoxContainer" parent="."]
+[node name="Entrada" type="VBoxContainer" parent="." unique_id=92509383]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 1
 anchors_preset = 8
@@ -168,36 +174,32 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="Entrada"]
+[node name="Sprite2D" type="Sprite2D" parent="Entrada" unique_id=52057183]
 modulate = Color(0, 0, 0, 1)
 z_index = 10
 position = Vector2(106, 73)
 texture = ExtResource("1_jov4l")
 script = ExtResource("2_nlxho")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Entrada/Sprite2D"]
-libraries = {
-&"": SubResource("AnimationLibrary_mhnvy")
-}
-autoplay = "surgir_sumir"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Entrada/Sprite2D" unique_id=1321709802]
+libraries/ = SubResource("AnimationLibrary_mhnvy")
+autoplay = &"surgir_sumir"
 
-[node name="Sprite2D2" type="Sprite2D" parent="Entrada"]
+[node name="Sprite2D2" type="Sprite2D" parent="Entrada" unique_id=1864230177]
 modulate = Color(0, 0, 0, 1)
 z_index = 4
 position = Vector2(97, 90)
 scale = Vector2(9.495273, 5.9964375)
 texture = ExtResource("1_jov4l")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Entrada/Sprite2D2"]
-libraries = {
-&"": SubResource("AnimationLibrary_aotf6")
-}
-autoplay = "tela_preta"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Entrada/Sprite2D2" unique_id=688256115]
+libraries/ = SubResource("AnimationLibrary_aotf6")
+autoplay = &"tela_preta"
 
-[node name="som_button" type="AudioStreamPlayer2D" parent="."]
+[node name="som_button" type="AudioStreamPlayer2D" parent="." unique_id=260832920]
 stream = ExtResource("7_mrf02")
 
-[node name="opcoes" type="PanelContainer" parent="."]
+[node name="opcoes" type="PanelContainer" parent="." unique_id=2048153336]
 custom_minimum_size = Vector2(200, 150)
 layout_mode = 1
 anchors_preset = 8
@@ -212,20 +214,20 @@ offset_bottom = 47.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="opcoes"]
+[node name="VBoxContainer" type="VBoxContainer" parent="opcoes" unique_id=1208927089]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="opcoes/VBoxContainer"]
+[node name="Label" type="Label" parent="opcoes/VBoxContainer" unique_id=925815879]
 layout_mode = 2
 theme_override_font_sizes/font_size = 26
 text = "Opções"
 horizontal_alignment = 1
 
-[node name="Label2" type="Label" parent="opcoes/VBoxContainer"]
+[node name="Label2" type="Label" parent="opcoes/VBoxContainer" unique_id=964649214]
 layout_mode = 2
 text = "Música:"
 
-[node name="controle_musica" type="HSlider" parent="opcoes/VBoxContainer"]
+[node name="controle_musica" type="HSlider" parent="opcoes/VBoxContainer" unique_id=497656265]
 layout_mode = 2
 theme_override_styles/slider = ExtResource("8_x4hpu")
 theme_override_styles/grabber_area = ExtResource("9_dd0tp")
@@ -236,12 +238,12 @@ value = 0.8
 script = ExtResource("8_bpsr4")
 audio_nome = "Music"
 
-[node name="Label3" type="Label" parent="opcoes/VBoxContainer"]
+[node name="Label3" type="Label" parent="opcoes/VBoxContainer" unique_id=383954488]
 layout_mode = 2
 text = "
 Efeitos sonoros:"
 
-[node name="controle_sonoro" type="HSlider" parent="opcoes/VBoxContainer"]
+[node name="controle_sonoro" type="HSlider" parent="opcoes/VBoxContainer" unique_id=1260895291]
 layout_mode = 2
 theme_override_styles/slider = ExtResource("8_x4hpu")
 theme_override_styles/grabber_area = ExtResource("9_dd0tp")
@@ -252,7 +254,7 @@ value = 0.5
 script = ExtResource("12_nty4d")
 audio_nome = "SFX"
 
-[node name="sair_das_opcoes" type="Button" parent="opcoes/VBoxContainer"]
+[node name="sair_das_opcoes" type="Button" parent="opcoes/VBoxContainer" unique_id=1538244797]
 custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
 size_flags_horizontal = 4

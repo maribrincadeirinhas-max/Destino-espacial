@@ -1,3 +1,3 @@
-extends Node2D
+extends Control
 
 @export var bossLife : int = 750

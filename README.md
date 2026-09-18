@@ -9,8 +9,8 @@ Este jogo foi desenvolvido utilizando a **Godot Engine 4.6**.
 ### Funcionalidades e Características
 * **Mecânica Principal:** Bossfight
 * **Estilo Visual:** Pixel art
-* **Controles: Mouse
-* **Temática: Espacial
+* **Controles:** Mouse
+* **Temática:** Espacial
 
 ---
 
